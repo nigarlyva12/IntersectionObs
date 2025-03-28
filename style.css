@@ -6,12 +6,13 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #444;
+    background-color: #f5f5f5; /* Light Gray */
 }
 
+/* Anchor tags */
 a {
     text-decoration: none;
     color: inherit;
@@ -19,22 +20,23 @@ a {
 
 button {
     cursor: pointer;
-    padding: 10px 20px;
-    background-color: #FF7043;
+    padding: 12px 20px;
+    background-color: #FF6F61; /* Soft Coral */
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #FF5722;
+    background-color: #D84B3A; /* Darker Coral */
 }
 
 /* Navigation Bar */
 header {
-    background-color: #333;
-    padding: 20px;
+    background-color: #2C3E50; /* Dark Blue */
+    padding: 10px;
 }
 
 nav {
@@ -45,7 +47,7 @@ nav {
 
 nav .logo h1 {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 nav .nav-links {
@@ -54,24 +56,25 @@ nav .nav-links {
 }
 
 nav .nav-links li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav .nav-links a {
     color: #fff;
-    font-size: 1.2rem;
-    padding: 10px;
+    font-size: 1.1rem;
     text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav .nav-links a:hover {
-    background-color: #FF7043;
-    border-radius: 5px;
+    background-color: #FF6F61; /* Soft Coral */
 }
 
 /* Home Section */
 .home-section {
-    background: url('https://via.placeholder.com/1920x800') center/cover no-repeat;
+    background: url('https://via.placeholder.com/1600x900') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -85,12 +88,13 @@ nav .nav-links a:hover {
     max-width: 600px;
     background: rgba(0, 0, 0, 0.6);
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .home-section h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .home-section p {
@@ -99,26 +103,29 @@ nav .nav-links a:hover {
 }
 
 .home-section .btn {
-    padding: 15px 25px;
-    background-color: #FF7043;
+    padding: 12px 25px;
+    background-color: #FF6F61; /* Soft Coral */
     color: white;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .home-section .btn:hover {
-    background-color: #FF5722;
+    background-color: #D84B3A; /* Darker Coral */
 }
 
 /* About Section */
 .about-section {
-    background-color: #fff;
-    padding: 60px 20px;
+    background-color: #ffffff;
+    padding: 150px 20px;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2 {
     font-size: 2.5rem;
+    color: #333;
     margin-bottom: 20px;
 }
 
@@ -126,6 +133,7 @@ nav .nav-links a:hover {
     font-size: 1.2rem;
     max-width: 900px;
     margin: 0 auto;
+    color: #666;
     line-height: 1.8;
 }
 
@@ -138,7 +146,8 @@ nav .nav-links a:hover {
 
 .contact-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .contact-section form {
@@ -150,28 +159,36 @@ nav .nav-links a:hover {
 .contact-section form textarea {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 12px 0;
     border: 2px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+    outline: none;
+    border-color: #FF6F61; /* Soft Coral */
 }
 
 .contact-section form button {
     width: 100%;
-    padding: 15px;
-    background-color: #FF7043;
+    padding: 14px;
+    background-color: #FF6F61; /* Soft Coral */
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .contact-section form button:hover {
-    background-color: #FF5722;
+    background-color: #D84B3A; /* Darker Coral */
 }
 
 /* Footer Section */
 footer {
-    background-color: #333;
+    background-color: #2C3E50; /* Dark Blue */
     color: white;
     text-align: center;
     padding: 20px;
@@ -179,4 +196,13 @@ footer {
 
 footer p {
     font-size: 1rem;
+}
+.lazy-load{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.lazy-load.show{
+    opacity: 1;
+    transform: translateY(0);
 }
